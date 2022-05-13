@@ -18,5 +18,12 @@
         "last_name": "Smith",
         "email": "ann@codingthesmartway.com"
       }
-    ]
+    ],
+    "requests": [
+       {
+      "id": 1,
+      "name": "Sebastian"
+       }
+  ]
+
 }
