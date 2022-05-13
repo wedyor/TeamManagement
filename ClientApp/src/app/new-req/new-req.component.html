@@ -1,0 +1,20 @@
+<mat-card>
+  <form [formGroup]="form" id="req" (submit)="sendReq(form)">
+  <mat-card-title>Request : </mat-card-title>
+  <br>
+
+  <h3>Select request type :</h3>
+  <select  (change)="file($event.target)" >
+    <option></option>
+    <option value="1">Fiche de paix</option>
+    <option value="2">Fiche de presence</option>
+    <option value="3">Congé</option>
+  </select>
+
+<br><br><br>
+  <h3>Description :</h3>
+  <textarea matInput formControlName="description"></textarea>
+<br><br>
+<button type="submit" > Send Request </button>
+</form>
+</mat-card>
