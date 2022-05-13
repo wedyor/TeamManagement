@@ -11,6 +11,7 @@ export class RequestsComponent implements OnInit {
   b: any;
   displayedColumns: string[] = ['id','employe' ,'description', 'type', 'status','date'];
 
+
   constructor(private EmployeeService:EmployeeService ) { }
 
   ngOnInit(): void {
