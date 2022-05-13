@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {AdminService} from './services/admin.service'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app-root/app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,6 +20,31 @@ import { OrdersTableComponent } from './requests-table/requests-table.component'
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { AdminComponent } from './admin/admin.component';
+
+
+
+
+
+
+
+
+import { MatDividerModule } from '@angular/material/divider';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { AppComponent } from './app.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
+import { AddComponent } from './Dialog/add/add.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { Routes } from '@angular/router';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { QRCodeModule } from 'angularx-qrcode';
+import { IonicModule } from '@ionic/angular';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +52,8 @@ import { MatSortModule } from '@angular/material/sort';
     NavComponent,
     DashComponent,
     CardComponent,
-    OrdersTableComponent
+    OrdersTableComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +70,21 @@ import { MatSortModule } from '@angular/material/sort';
     MatMenuModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,    
+    MatDividerModule,
+    FlexLayoutModule,
+    MatFormFieldModule,
+    MatInputModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatDialogModule,
+    MatSnackBarModule,
+    MatCheckboxModule,
+    QRCodeModule,
+    IonicModule.forRoot(),
+    ScrollingModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
