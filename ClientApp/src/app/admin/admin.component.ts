@@ -4,7 +4,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { BehaviorSubject, Observable } from 'rxjs';
-import {Users} from '../models/Users'
+import {Users} from '../models/Users.model'
 import { AdminService } from '../services/admin.service';
 import { VERSION } from '@angular/core';
 
@@ -20,8 +20,8 @@ export class AdminComponent implements OnInit {
     );
     resultsLength: number = 0;
     RefreshUsers = new BehaviorSubject<boolean>(true)
-    @ViewChild(MatPaginator) paginator: MatPaginator;
-    @ViewChild(MatSort) sort: MatSort;
+    @ViewChild(MatPaginator) paginator!: MatPaginator;
+    @ViewChild(MatSort) sort!: MatSort;
     angularVersion = VERSION.full;
     users: any;
   

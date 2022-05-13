@@ -21,28 +21,17 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { AdminComponent } from './admin/admin.component';
-
-
-
-
-
-
-
-
 import { MatDividerModule } from '@angular/material/divider';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { AppComponent } from './app.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
-import { AddComponent } from './Dialog/add/add.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { Routes } from '@angular/router';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { QRCodeModule } from 'angularx-qrcode';
-import { IonicModule } from '@ionic/angular';
+
 import { ScrollingModule } from '@angular/cdk/scrolling';
 
 
@@ -54,6 +43,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     CardComponent,
     OrdersTableComponent,
     AdminComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -81,8 +71,6 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     MatDialogModule,
     MatSnackBarModule,
     MatCheckboxModule,
-    QRCodeModule,
-    IonicModule.forRoot(),
     ScrollingModule
 
   ],
