@@ -1,29 +1,66 @@
 {
-    "employees": [
-      {
-        "id": 1,
-        "first_name": "Sebastian",
-        "last_name": "Eschweiler",
-        "email": "sebastian@codingthesmartway.com"
-      },
-      {
-        "id": 2,
-        "first_name": "Steve",
-        "last_name": "Palmer",
-        "email": "steve@codingthesmartway.com"
-      },
-      {
-        "id": 3,
-        "first_name": "Ann",
-        "last_name": "Smith",
-        "email": "ann@codingthesmartway.com"
-      }
-    ],
-    "requests": [
-       {
+  "employees": [
+    {
       "id": 1,
-      "name": "Sebastian"
-       }
+      "first_name": "Sebastian",
+      "last_name": "Eschweiler",
+      "email": "sebastian@codingthesmartway.com"
+    },
+    {
+      "id": 1,
+      "first_name": "hamdi",
+      "last_name": "Eschweiler",
+      "email": "hamdi@codingthesmartway.com"
+    }
+  ],
+  "requests": [
+    {
+      "employe": "hamdi",
+      "id": 1,
+      "description": "Sebastian",
+      "type": "fiche_de_paix",
+      "status": "pending",
+      "date": "2018-02-01"
+    },
+    {
+      "employe": "hamdi",
+      "id": 2,
+      "description": "Sebastian",
+      "type": "congé",
+      "status": "pending",
+      "date": "2019-02-04"
+    },
+    {
+      "employe": "hamdi",
+      "id": 3,
+      "description": "Sebastian",
+      "type": "fiche_de_pending",
+      "status": "pending",
+      "date": "2019-02-04"
+    },
+    {
+      "employe": "1",
+      "id": 4,
+      "description": "description",
+      "type": "pd",
+      "status": "pending",
+      "date": "1234"
+    },
+    {
+      "employe": "1",
+      "id": 7,
+      "description": "zzzzzzzz",
+      "type": "Fiche de presence",
+      "status": "pending",
+      "date": "5/13/2022"
+    },
+    {
+      "employe": "1",
+      "id": 10,
+      "description": "présence svp",
+      "type": "Fiche de presence",
+      "status": "pending",
+      "date": "5/13/2022"
+    }
   ]
-
 }

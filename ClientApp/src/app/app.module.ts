@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule,HttpClient ,HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app-root/app.component';
@@ -16,10 +17,15 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { CardComponent } from './card/card.component';
-import { OrdersTableComponent } from './requests-table/requests-table.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { RequestsComponent } from './requests/requests.component';
+import { NewReqComponent } from './new-req/new-req.component';
+import {MatSelectModule} from '@angular/material/select';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,7 +33,8 @@ import { MatSortModule } from '@angular/material/sort';
     NavComponent,
     DashComponent,
     CardComponent,
-    OrdersTableComponent
+    RequestsComponent,
+    NewReqComponent
   ],
   imports: [
     BrowserModule,
@@ -44,9 +51,14 @@ import { MatSortModule } from '@angular/material/sort';
     MatMenuModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    HttpClientModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [HttpClientModule,HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
