@@ -16,13 +16,18 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { CardComponent } from './card/card.component';
+import { OrdersTableComponent } from './requests-table/requests-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     DashComponent,
-    CardComponent
+    CardComponent,
+    OrdersTableComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +41,10 @@ import { CardComponent } from './card/card.component';
     MatListModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
