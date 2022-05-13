@@ -31,7 +31,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { Routes } from '@angular/router';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-
+import { NewReqComponent } from './new-req/new-req.component';
+import { RequestsComponent } from './requests/requests.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 
 
@@ -42,7 +43,9 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     DashComponent,
     CardComponent,
     OrdersTableComponent,
-    AdminComponent
+    AdminComponent,
+    NewReqComponent,
+    RequestsComponent
     
   ],
   imports: [

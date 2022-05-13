@@ -1,28 +1,66 @@
 {
-  "users":[
-      {
-          "userId":1,
-          "firstName":"iheb",
-          "lastName":"abbassi",
-          "email":"iheb@gmail.com",
-          "password":"123456",
-          "role":"employee"
-          },
-          {
-              "userId":2,
-              "firstName":"iomarheb",
-              "lastName":"abbassi",
-              "email":"omar@gmail.com",
-              "password":"123456",
-              "role":"employee"
-              },
-              { 
-              "userId":3,
-              "firstName":"yecer",
-              "lastName":"abbassi",
-              "email":"yecer@gmail.com",
-              "password":"123456",
-              "role":"employee"
-              }
- ]
+  "users": [
+    {
+      "userId": 1,
+      "firstName": "iheb",
+      "lastName": "abbassi",
+      "email": "iheb@gmail.com",
+      "password": "123456",
+      "role": "employee"
+    },
+    {
+      "userId": 2,
+      "firstName": "iomarheb",
+      "lastName": "abbassi",
+      "email": "omar@gmail.com",
+      "password": "123456",
+      "role": "employee"
+    },
+    {
+      "userId": 3,
+      "firstName": "yecer",
+      "lastName": "abbassi",
+      "email": "yecer@gmail.com",
+      "password": "123456",
+      "role": "employee"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "first_name": "Sebastian",
+      "last_name": "Eschweiler",
+      "email": "sebastian@codingthesmartway.com"
+    },
+    {
+      "id": 2,
+      "first_name": "Steve",
+      "last_name": "Palmer",
+      "email": "steve@codingthesmartway.com"
+    },
+    {
+      "id": 3,
+      "first_name": "Ann",
+      "last_name": "Smith",
+      "email": "ann@codingthesmartway.com"
+    }
+  ],
+  "requests": [
+    {
+      "employe": "1",
+      "id": 19,
+      "description": "ddddd",
+      "type": "Fiche de paix",
+      "status": "pending",
+      "date": "5/13/2022"
+    },
+    {
+      "employe": "1",
+      "id": 20,
+      "description": "ssss",
+      "type": "Fiche de paix",
+      "status": "pending",
+      "date": "5/13/2022"
+    }
+  ]
 }

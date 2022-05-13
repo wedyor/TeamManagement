@@ -18,7 +18,7 @@ export class RequestsComponent implements OnInit {
   }
   async getRequests() {
     this.a = await this.EmployeeService.getRequest();
-   //console.log(this.a);
+     console.log(this.a);
 
     }
 }
