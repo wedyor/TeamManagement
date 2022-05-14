@@ -49,18 +49,34 @@
     {
       "employe": "1",
       "id": 19,
-      "description": "ddddd",
-      "type": "Fiche de paix",
-      "status": "pending",
-      "date": "5/13/2022"
+      "description": "description",
+      "type": "pd",
+      "status": "refused",
+      "date": "1234"
     },
     {
       "employe": "1",
       "id": 20,
       "description": "ssss",
       "type": "Fiche de paix",
-      "status": "pending",
+      "status": "refused",
       "date": "5/13/2022"
+    },
+    {
+      "employe": "4",
+      "id": 2,
+      "description": "ddddddd",
+      "type": "pd",
+      "status": "refused",
+      "date": "1234"
+    },
+    {
+      "employe": "4",
+      "id": 3,
+      "description": "cccc",
+      "type": "pd",
+      "status": "refused",
+      "date": "1234"
     }
   ]
 }

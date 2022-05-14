@@ -1,0 +1,19 @@
+mat-card{
+  margin: 80px;
+  width: 300px;
+  height: 310px;
+  background-color: rgb(146, 146, 146);
+}
+
+button{
+  margin-left: 100px;
+  width: 80px;
+  height: 50px;
+}
+
+input{
+  display: flex;
+  margin: 10px;
+  width: 220px;
+  height: 25px;
+}

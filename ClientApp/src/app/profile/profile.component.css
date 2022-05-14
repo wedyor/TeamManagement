@@ -1,0 +1,13 @@
+mat-card{
+  margin: 80px;
+  width: 450px;
+  height: 280px;
+  background-color: rgb(146, 146, 146);
+}
+
+img{
+  position:absolute;
+  margin-left: 320px;
+  width: 120px;
+  height: 120px;
+}

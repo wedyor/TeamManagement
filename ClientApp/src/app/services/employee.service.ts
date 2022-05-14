@@ -9,6 +9,7 @@ import { Employee } from '../models/employee.model';
 })
 export class EmployeeService {
   b: any;
+  user : any;
   fileType: any;
   c : request = {
     employe: "1",
@@ -64,6 +65,10 @@ export class EmployeeService {
 await this.http.post('http://localhost:3000/requests',req).toPromise();
 
   }
-
+ async getUser(){
+  let userId = localStorage.getItem('userId');
+  this.user = await this.http.get('http://localhost:3000/users?userId='+userId).toPromise();
+  return this.user;
+}
 
 }

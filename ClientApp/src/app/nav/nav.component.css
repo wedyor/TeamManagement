@@ -15,3 +15,10 @@
   top: 0;
   z-index: 1;
 }
+
+.logout{
+  top: 400px;
+}
+.login{
+  top: 400px;
+}

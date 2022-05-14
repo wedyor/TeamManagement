@@ -1,0 +1,29 @@
+<mat-card>
+<h2 class="card-title">Sign In</h2>
+<br>
+<form class="form-signin" [formGroup]="loginForm" (submit)="onLogin(loginForm)">
+  <div class="form-group">
+    <label for="inputEmail">Email address *</label>
+    <input
+      type="text"
+      formControlName="email"
+      class="form-control"
+      id="inputEmail"
+      placeholder="Enter email"
+    />
+  </div>
+  <br/>
+  <div class="form-group">
+    <label for="inputPassword">Password *</label>
+    <input
+      type="password"
+      name="password"
+      formControlName="password"
+      class="form-control"
+      id="inputPassword"
+      placeholder="Enter password"/>
+  </div>
+  <br/>
+  <button id="submitButton" type="submit">Login</button>
+</form>
+</mat-card>

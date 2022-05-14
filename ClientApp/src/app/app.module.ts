@@ -34,6 +34,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { NewReqComponent } from './new-req/new-req.component';
 import { RequestsComponent } from './requests/requests.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { LoginComponent } from './auth/login/login.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -45,8 +47,10 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     OrdersTableComponent,
     AdminComponent,
     NewReqComponent,
-    RequestsComponent
-    
+    RequestsComponent,
+    LoginComponent,
+    ProfileComponent
+
   ],
   imports: [
     BrowserModule,
@@ -63,7 +67,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     MatMenuModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule,    
+    MatSortModule,
     MatDividerModule,
     FlexLayoutModule,
     MatFormFieldModule,
@@ -75,7 +79,6 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     MatSnackBarModule,
     MatCheckboxModule,
     ScrollingModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]
