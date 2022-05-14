@@ -1,28 +1,20 @@
 {
   "users": [
     {
-      "userId": 1,
-      "firstName": "iheb",
-      "lastName": "abbassi",
-      "email": "iheb@gmail.com",
-      "password": "123456",
-      "role": "employee"
+      "id": "147",
+      "firstname": "hjhhj",
+      "lastname": "jjhhj",
+      "email": "omartrainer@gmail.com",
+      "password": "pass123",
+      "role": "Responsable"
     },
     {
-      "userId": 2,
-      "firstName": "iomarheb",
-      "lastName": "abbassi",
-      "email": "omar@gmail.com",
-      "password": "123456",
-      "role": "employee"
-    },
-    {
-      "userId": 3,
-      "firstName": "yecer",
-      "lastName": "abbassi",
-      "email": "yecer@gmail.com",
-      "password": "123456",
-      "role": "employee"
+      "firstname": "hghgh",
+      "lastname": "ghghgh",
+      "email": "tttt@gmail.com",
+      "password": "pass123",
+      "role": "Employee",
+      "id": "1111"
     }
   ],
   "employees": [

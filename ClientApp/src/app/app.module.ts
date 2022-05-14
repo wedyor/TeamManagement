@@ -36,6 +36,9 @@ import { RequestsComponent } from './requests/requests.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { LoginComponent } from './auth/login/login.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AddComponent } from './Dialog/add/add.component';
+import { DeleteComponent } from './Dialog/delete/delete.component';
+import { EditComponent } from './Dialog/edit/edit.component';
 
 
 @NgModule({
@@ -49,7 +52,10 @@ import { ProfileComponent } from './profile/profile.component';
     NewReqComponent,
     RequestsComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
+    AddComponent,
+    DeleteComponent,
+    EditComponent
 
   ],
   imports: [

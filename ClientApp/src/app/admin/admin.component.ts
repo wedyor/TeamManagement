@@ -8,6 +8,9 @@ import {Users} from '../models/Users.model'
 import { AdminService } from '../services/admin.service';
 import { VERSION } from '@angular/core';
 
+import { DeleteComponent } from '../Dialog/delete/delete.component';
+import { EditComponent } from '../Dialog/edit/edit.component';
+import { AddComponent } from '../Dialog/add/add.component';
 
 @Component({
   selector: 'app-admin',
@@ -51,4 +54,47 @@ export class AdminComponent implements OnInit {
     );
 
   }
+
+  AddNewUser() {
+    this.dialog.open(AddComponent, {
+      maxHeight: '90vh'
+    });
+
+    // this.ref.detectChanges();
+
+  }
+  DeleteUser(User: Users) {
+    this.dialog.open(DeleteComponent, {
+      
+      data: {
+        id: User.id,
+        firstname: User.firstname,
+        lastname: User.lastname,
+        email: User.email,
+        password: User.password,
+        role: User.role,
+
+      },
+    });
+    // this.ref.detectChanges();
+
+  }
+  EditUser(User: Users) {
+    this.dialog.open(EditComponent, {
+      data: {
+        id: User.id,
+        firstname: User.firstname,
+        lastname: User.lastname,
+        email: User.email,
+        password: User.password,
+        role: User.role,
+
+      },
+      maxHeight: '90vh'
+    });
+    // this.ref.detectChanges();
+
+    console.log(User.id + ' From parent component');
+  }
+  
 }
