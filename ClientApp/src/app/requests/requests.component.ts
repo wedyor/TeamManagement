@@ -12,7 +12,7 @@ export class RequestsComponent implements OnInit {
   a: any;
   b: any;
   role : any;
-  displayedColumns: string[] = ['id','Description', 'Type', 'Status','Date'];
+  displayedColumns: string[] = ['id'];
 
   constructor(private EmployeeService:EmployeeService, private ResponsableService:ResponsableService ) { }
 
@@ -21,10 +21,12 @@ export class RequestsComponent implements OnInit {
    this.role = localStorage.getItem('role');
    if(this.role == 'Responsable'){
     this.getRequests();
-     this.displayedColumns.push('Employe');
-     this.displayedColumns.push('Accept');
+     this.displayedColumns.push('Employe','Description', 'Type', 'Status','Date','Accept');
+    
+  
    }else if (this.role =='Employee'){
       this.getEmployeReq();
+      this.displayedColumns.push('Description', 'Type', 'Status','Date');
    }
   }
 

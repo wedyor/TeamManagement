@@ -51,7 +51,7 @@
       "id": 19,
       "description": "This is a description",
       "type": "pd",
-      "status": "refused",
+      "status": "accepted",
       "date": "1234"
     },
     {
@@ -93,6 +93,22 @@
       "type": "Fiche de presence",
       "status": "pending",
       "date": "5/14/2022"
+    },
+    {
+      "employe": "omar",
+      "id": 5,
+      "description": "this is a test",
+      "type": "Fiche de paix",
+      "status": "pending",
+      "date": "5/15/2022"
+    },
+    {
+      "employe": "omar",
+      "id": 15,
+      "description": "second test",
+      "type": "Fiche de presence",
+      "status": "pending",
+      "date": "5/15/2022"
     }
   ]
 }

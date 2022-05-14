@@ -7,10 +7,10 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import {Users} from '../models/Users.model'
 import { AdminService } from '../services/admin.service';
 import { VERSION } from '@angular/core';
-
 import { DeleteComponent } from '../Dialog/delete/delete.component';
 import { EditComponent } from '../Dialog/edit/edit.component';
 import { AddComponent } from '../Dialog/add/add.component';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-admin',
@@ -28,7 +28,7 @@ export class AdminComponent implements OnInit {
     angularVersion = VERSION.full;
     users: any;
   
-  constructor(private adminservice: AdminService,
+  constructor(private adminservice: AdminService, private authservice: AuthService,
     private dialog: MatDialog,
     private ref: ChangeDetectorRef) { }
 
@@ -95,6 +95,9 @@ export class AdminComponent implements OnInit {
     // this.ref.detectChanges();
 
     console.log(User.id + ' From parent component');
+  }
+  onlogout(){
+    this.authservice.logout();
   }
   
 }

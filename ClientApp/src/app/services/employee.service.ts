@@ -64,7 +64,7 @@ export class EmployeeService {
   let now = new Date();
     let req = {
       employe: a,
-      id: 1,
+      id: 15,
       description: description,
       type: this.fileType,
       status: "pending",
@@ -73,7 +73,7 @@ export class EmployeeService {
 
 console.log(req);
 await this.http.post('http://localhost:3000/requests',req).toPromise();
-
+    window.location.reload();
   }
  async getUser(){
   let userId = localStorage.getItem('userId');

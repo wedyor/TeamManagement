@@ -11,7 +11,7 @@ import { RequestsComponent } from './requests/requests.component';
 const routes: Routes = [
   { path: '' , component: LoginComponent},
   { path: 'profile', component: ProfileComponent, canActivate : [AuthGuard]  },
-  { path: 'dashboard', component: DashComponent, canActivate : [AuthGuard] },
+  // { path: 'dashboard', component: DashComponent, canActivate : [AuthGuard] },
   { path: 'admin', component: AdminComponent , canActivate : [AuthGuard] },
   { path: 'requests', component: RequestsComponent, canActivate : [AuthGuard]  },
   { path: 'newReq', component: NewReqComponent, canActivate : [AuthGuard]  },

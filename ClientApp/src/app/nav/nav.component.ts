@@ -11,6 +11,7 @@ import { AuthService } from '../auth/auth.service';
 })
 export class NavComponent implements OnInit{
   isAuth : any;
+  b: any;
   menuItems = ['dashboard', 'profile', 'requests'];
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -21,6 +22,7 @@ export class NavComponent implements OnInit{
   constructor(private breakpointObserver: BreakpointObserver, private AuthService:AuthService) {}
   ngOnInit(): void {
       this.isAuth = localStorage.getItem('isAuth');
+      this.b = localStorage.getItem('role');
       console.log(this.isAuth)
   }
 

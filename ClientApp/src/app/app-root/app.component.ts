@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit{
   title = 'ClientApp';
   a : any ;
+  b : any ;
    ngOnInit(): void {
        this.a = localStorage.getItem('isAuth');
+       this.b = localStorage.getItem('role');
    }
 }

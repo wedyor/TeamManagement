@@ -1,6 +1,6 @@
 <!--dash.component.html-->
 
-<button mat-button routerLink="/newReq" class="butt"> Create Request </button>
+<button mat-button routerLink="/newReq" class="butt" *ngIf="this.role=='Employee'"> Create Request </button>
 <div class="grid-container">
   <div class="mat-elevation-z8 small-table">
     <table mat-table  [dataSource]="this.a" class="full-width-table" matSort aria-label="Elements">
