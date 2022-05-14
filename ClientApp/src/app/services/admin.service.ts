@@ -9,7 +9,7 @@ import {Users} from '../models/Users.model'
   providedIn: 'root'
 })
 export class AdminService {
-  URL: string = 'http://localhost:3000/z';
+  URL: string = 'http://localhost:3000/users';
   Id: number = 0;
   constructor(private http: HttpClient){ }
 
