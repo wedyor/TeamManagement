@@ -1,4 +1,5 @@
 <!--dash.component.html-->
+
 <button mat-button routerLink="/newReq" class="butt"> Create Request </button>
 <div class="grid-container">
   <div class="mat-elevation-z8 small-table">
@@ -32,7 +33,7 @@
         <th mat-header-cell *matHeaderCellDef mat-sort-header>Date</th>
         <td mat-cell *matCellDef="let row">{{row.date}}</td>
       </ng-container>
-      <ng-container matColumnDef="Accept">
+      <ng-container matColumnDef="Accept" >
         <th mat-header-cell *matHeaderCellDef mat-sort-header>Accept/Reject</th>
         <td mat-cell *matCellDef="let row"><button (click)="accept(row)">accept</button> <button (click)="refuse(row)">reject</button></td>
       </ng-container>

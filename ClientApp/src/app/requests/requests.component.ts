@@ -11,19 +11,28 @@ import { ResponsableService } from '../services/responsable.service';
 export class RequestsComponent implements OnInit {
   a: any;
   b: any;
-  displayedColumns: string[] = ['id','Employe' ,'Description', 'Type', 'Status','Date', 'Accept'];
+  role : any;
+  displayedColumns: string[] = ['id','Description', 'Type', 'Status','Date'];
 
   constructor(private EmployeeService:EmployeeService, private ResponsableService:ResponsableService ) { }
 
   ngOnInit(): void {
-   this.getRequests();
+
+   this.role = localStorage.getItem('role');
+   if(this.role == 'Responsable'){
+    this.getRequests();
+     this.displayedColumns.push('Employe');
+     this.displayedColumns.push('Accept');
+   }else if (this.role =='Employee'){
+      this.getEmployeReq();
+   }
   }
 
   async getRequests() {
     this.a = await this.EmployeeService.getRequest();
      console.log(this.a);
-
     }
+
     accept(req:request){
       console.log(req);
       req.status = 'accepted' ;
@@ -35,4 +44,9 @@ export class RequestsComponent implements OnInit {
       req.status = 'refused' ;
       this.ResponsableService.refuseReq(req);
     }
+
+async    getEmployeReq(){
+      this.a = await this.EmployeeService.getEmployeReq();
+    }
+
 }

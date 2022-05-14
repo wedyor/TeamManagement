@@ -1,17 +1,17 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
+<mat-sidenav-container class="sidenav-container" >
+ <mat-sidenav #drawer class="sidenav" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
+      [opened]="(isHandset$ | async) === false"  >
+    <mat-toolbar  *ngIf="this.isAuth == 'true'">Menu</mat-toolbar>
+    <mat-nav-list  *ngIf="this.isAuth == 'true'">
       <a *ngFor="let item of menuItems" mat-list-item [routerLink]="'/'+item"> {{item | titlecase}} </a>
-      <a mat-list-item *ngIf="this.isAuth =='true'" class="logout" (click)="logout()">Logout</a>
-      <a mat-list-item *ngIf="this.isAuth =='false'" class="login" routerLink="/login">Login</a>
+      <a mat-list-item *ngIf="this.isAuth == 'true'" class="logout" (click)="logout()">Logout</a>
+      <a mat-list-item *ngIf="this.isAuth == 'false'" class="login" routerLink="/">Login</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar color="primary" *ngIf="this.isAuth == 'true'">
       <button
         type="button"
         aria-label="Toggle sidenav"

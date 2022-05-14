@@ -12,7 +12,7 @@ export class ProfileComponent implements OnInit {
 
   async ngOnInit() {
     this.user = await this.EmployeeService.getUser();
-     
+     console.log(this.user)
   }
 
 }

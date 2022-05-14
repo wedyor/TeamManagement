@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { AuthData } from "./auth-data.model";
 import { RegData } from "./reg-data.model";
-import { Subject } from "rxjs";
+import { Subject, windowWhen } from "rxjs";
 import { Router } from "@angular/router";
 
 @Injectable({ providedIn: "root"})
@@ -37,12 +37,18 @@ export class AuthService {
    this.user = await this.http.get("http://localhost:3000/users?email="+email).toPromise();
    console.log(this.user[0]);
    if(this.user && this.user[0].password == password){
-   localStorage.setItem("userId", this.user[0].userId);
+   localStorage.setItem("userId", this.user[0].id);
    localStorage.setItem("role", this.user[0].role);
    localStorage.setItem("email", this.user[0].email);
+   localStorage.setItem("name", this.user[0].firstname);
    localStorage.setItem("isAuth", 'true');
    this.isAuthenticated = true;
-   this.router.navigate(['/requests']);
+
+   if(this.user[0].role == 'Admin'){
+     console.log("admin")
+    this.router.navigate(['/admin'])
+   }else{  window.location.reload();
+     this.router.navigate(['/requests']);}
    }
    else{ console.log('verifier pass')}
     }
@@ -60,11 +66,14 @@ export class AuthService {
 
 
     logout(){
+      window.location.reload();
       localStorage.removeItem("userId");
       localStorage.removeItem("role");
       localStorage.removeItem("email");
+      localStorage.removeItem("name");
       localStorage.setItem("isAuth", 'false');
-      window.location.reload();
+      this.router.navigate(['/']);
+      //window.location.reload();
     }
 
 

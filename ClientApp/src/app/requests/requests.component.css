@@ -1,5 +1,6 @@
 .grid-container {
-  margin: 20px;
+  margin-left: 50px;
+  margin-top: 10px;
 }
 
 .dashboard-card {
@@ -20,13 +21,9 @@
   text-align: center;
 }
 
-
-.small-table{
-  overflow-x: scroll !important;
-}
 th{
-  width: 120px;
-  height: 50px;
+  width: 170px;
+  height: 60px;
 }
 .butt{
   margin: 20px;

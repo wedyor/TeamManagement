@@ -35,6 +35,14 @@ export class EmployeeService {
   return this.b;
   }
 
+  async getEmployeReq(){
+    let name = localStorage.getItem('name');
+    this.b = await this.http.get('http://localhost:3000/requests?employe='+name).toPromise();
+    console.log(this.b);
+    return this.b;
+  }
+
+
  async PostReq(description:string, type:string){
        console.log(type,description);
     switch (type){
@@ -51,23 +59,25 @@ export class EmployeeService {
         break;
       }
     }
+    let a = localStorage.getItem('name');
+    console.log(a);
   let now = new Date();
     let req = {
-      employe: "1",
-      id: 22,
+      employe: a,
+      id: 1,
       description: description,
       type: this.fileType,
       status: "pending",
       date: now.toLocaleDateString()
     };
 
-
+console.log(req);
 await this.http.post('http://localhost:3000/requests',req).toPromise();
 
   }
  async getUser(){
   let userId = localStorage.getItem('userId');
-  this.user = await this.http.get('http://localhost:3000/users?userId='+userId).toPromise();
+  this.user = await this.http.get('http://localhost:3000/users?id='+userId).toPromise();
   return this.user;
 }
 

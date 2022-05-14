@@ -1,2 +1,10 @@
-<app-nav></app-nav>
+<!--  <app-nav></app-nav> -->
+<header></header>
+<body>
 
+
+<main>
+  <app-nav *ngIf="this.a == 'true'"></app-nav>
+  <router-outlet></router-outlet>
+</main>
+</body>

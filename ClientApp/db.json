@@ -2,19 +2,27 @@
   "users": [
     {
       "id": "147",
-      "firstname": "hjhhj",
+      "firstname": "iheb",
       "lastname": "jjhhj",
       "email": "omartrainer@gmail.com",
       "password": "pass123",
       "role": "Responsable"
     },
     {
-      "firstname": "hghgh",
+      "firstname": "omar",
       "lastname": "ghghgh",
       "email": "tttt@gmail.com",
       "password": "pass123",
       "role": "Employee",
       "id": "1111"
+    },
+    {
+      "firstname": "hamdi",
+      "lastname": "ghghgh",
+      "email": "admin@gmail.com",
+      "password": "pass123",
+      "role": "Admin",
+      "id": "123"
     }
   ],
   "employees": [
@@ -63,12 +71,28 @@
       "date": "1234"
     },
     {
-      "employe": "med",
+      "employe": "omar",
       "id": 3,
       "description": "This is a description",
       "type": "pd",
       "status": "refused",
       "date": "1234"
+    },
+    {
+      "employe": "1111",
+      "id": 22,
+      "description": "9999",
+      "type": "Fiche de presence",
+      "status": "pending",
+      "date": "5/14/2022"
+    },
+    {
+      "employe": "omar",
+      "id": 1,
+      "description": "yy",
+      "type": "Fiche de presence",
+      "status": "pending",
+      "date": "5/14/2022"
     }
   ]
 }

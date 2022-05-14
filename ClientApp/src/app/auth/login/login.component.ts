@@ -26,6 +26,10 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+   let a = localStorage.getItem('isAuth');
+    if(a == 'true'){
+          this.router.navigate(['/requests']);
+    }
     this.loginForm = new FormGroup({
       email : new FormControl(null, { validators: [] }),
       password : new FormControl(null, { validators: [] })
