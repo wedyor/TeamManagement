@@ -34,7 +34,7 @@ namespace TeamManagement.Models
         [Column("Email")]
         [Required]
         [StringLength(50)]
-        public string Email { get; set; }
+        public string Email { get; set; }   
 
 
         [Column("Password")]

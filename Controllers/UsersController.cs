@@ -40,7 +40,7 @@ namespace TeamManagement.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult> PutBooks(int id, [FromBody] User user)
+        public async Task<ActionResult> PutUsers(int id, [FromBody] User user)
         {
             if (id != user.UserId)
             {

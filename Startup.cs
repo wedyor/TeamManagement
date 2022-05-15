@@ -29,6 +29,7 @@ namespace TeamManagement
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<ITeamRepository, TeamRepository>();
+            services.AddScoped<IRequestRepository, RequestRepository>();
             services.AddControllers();
             services.AddDbContext<TeamContext>(options =>
            options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));

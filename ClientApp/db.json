@@ -1,113 +1,78 @@
 {
   "users": [
     {
-      "id": "147",
-      "firstname": "iheb",
-      "lastname": "jjhhj",
-      "email": "omartrainer@gmail.com",
+      "userId": "1",
+      "role": "Responsable",
+      "firstName": "Med",
+      "lastName": "Ali",
+      "email": "medali@gmail.com",
+      "password": "pass123"
+      
+    },
+    {
+      "id": "2",
+      "firstname": "Med",
+      "lastname": "Ali",
+      "email": "medaliemplyee@gmail.com",
       "password": "pass123",
-      "role": "Responsable"
-    },
-    {
-      "firstname": "omar",
-      "lastname": "ghghgh",
-      "email": "tttt@gmail.com",
-      "password": "pass123",
-      "role": "Employee",
-      "id": "1111"
-    },
-    {
-      "firstname": "hamdi",
-      "lastname": "ghghgh",
-      "email": "admin@gmail.com",
-      "password": "pass123",
-      "role": "Admin",
-      "id": "123"
-    }
-  ],
-  "employees": [
-    {
-      "id": 1,
-      "first_name": "Sebastian",
-      "last_name": "Eschweiler",
-      "email": "sebastian@codingthesmartway.com"
-    },
-    {
-      "id": 2,
-      "first_name": "Steve",
-      "last_name": "Palmer",
-      "email": "steve@codingthesmartway.com"
-    },
-    {
-      "id": 3,
-      "first_name": "Ann",
-      "last_name": "Smith",
-      "email": "ann@codingthesmartway.com"
+      "role": "Employee"
     }
   ],
   "requests": [
     {
-      "employe": "iheb",
-      "id": 19,
+      "employe": "Med",
+      "id": 1,
       "description": "This is a description",
-      "type": "pd",
+      "type": "fiche de paie",
       "status": "accepted",
-      "date": "1234"
+      "date": "01/12/2020"
     },
     {
-      "employe": "omar",
-      "id": 20,
-      "description": "This is a description",
-      "type": "Fiche de paix",
-      "status": "refused",
-      "date": "5/13/2022"
-    },
-    {
-      "employe": "yesser",
+      "employe": "Accepté",
       "id": 2,
       "description": "This is a description",
-      "type": "pd",
-      "status": "refused",
-      "date": "1234"
+      "type": "fiche de présence",
+      "status": "Accepté",
+      "date": "01/12/2020"
     },
     {
-      "employe": "omar",
+      "employe": "Ahmed",
       "id": 3,
       "description": "This is a description",
-      "type": "pd",
-      "status": "refused",
-      "date": "1234"
+      "type": "demande congé",
+      "status": "Refusé",
+      "date": "02/10/2021"
     },
     {
-      "employe": "1111",
-      "id": 22,
-      "description": "9999",
-      "type": "Fiche de presence",
-      "status": "pending",
-      "date": "5/14/2022"
-    },
-    {
-      "employe": "omar",
+      "employe": "Ali",
       "id": 1,
-      "description": "yy",
-      "type": "Fiche de presence",
-      "status": "pending",
-      "date": "5/14/2022"
+      "description": "This is a description",
+      "type": "fiche de paie",
+      "status": "En Cours",
+      "date": "01/12/2020"
     },
     {
-      "employe": "omar",
-      "id": 5,
-      "description": "this is a test",
-      "type": "Fiche de paix",
-      "status": "pending",
-      "date": "5/15/2022"
+      "employe": "Salah",
+      "id": 2,
+      "description": "This is a description",
+      "type": "fiche de présence",
+      "status": "Accepté",
+      "date": "01/12/2020"
     },
     {
-      "employe": "omar",
-      "id": 15,
-      "description": "second test",
-      "type": "Fiche de presence",
-      "status": "pending",
+      "employe": "Nizar",
+      "id": 3,
+      "description": "This is a description",
+      "type": "demande congé",
+      "status": "Refusé",
+      "date": "02/10/2021"
+    },
+    {
+      "employe": "Med",
+      "id": 65,
+      "description": "test desc",
+      "type": "Congé",
+      "status": "refused",
       "date": "5/15/2022"
     }
   ]
