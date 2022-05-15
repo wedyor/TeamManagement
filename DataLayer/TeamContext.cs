@@ -12,10 +12,9 @@ namespace TeamManagement.DataLayer
         public TeamContext(DbContextOptions<TeamContext> options) : base(options)
         {
         }
+        public DbSet<User> Users { get; set; }
         public DbSet<Request> Requests { get; set; }
-        public DbSet<Manager> Managers { get; set; }
-        public DbSet<Employee> Employees { get; set; }
-        public DbSet<Administrator> Administrators { get; set; }
+
 
     }
 

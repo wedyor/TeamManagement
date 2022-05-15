@@ -7,36 +7,39 @@ using System.Threading.Tasks;
 
 namespace TeamManagement.Models
 {
-    public class Request
+    public class User
     {
-        [Column("RequestId")]
+        [Column("UserId")]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Required]
-        public int RequestId { get; set; }
+        public int UserId { get; set; }
 
-        [Column("Type")]
+        [Column("Role")]
         [Required]
         [StringLength(50)]
-        public string Type { get; set; }
+        public string Role { get; set; }
 
-        [Column("Description")]
+        [Column("FirstName")]
         [Required]
         [StringLength(50)]
-        public string Description { get; set; }
+        public string FirstName { get; set; }
 
-        [Column("Date")]
+        [Column("LastName")]
         [Required]
         [StringLength(50)]
-        public string Date { get; set; }
+        public string LastName { get; set; }
 
-        [Column("Status")]
+
+        [Column("Email")]
         [Required]
         [StringLength(50)]
-        public string Status { get; set; }
+        public string Email { get; set; }
 
-        [ForeignKey("UserId")]
-        public virtual User user { get; set; }
 
+        [Column("Password")]
+        [Required]
+        [StringLength(50)]
+        public string Password { get; set; }
     }
 }
