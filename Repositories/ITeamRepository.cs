@@ -8,10 +8,12 @@ namespace TeamManagement.Repositories
 {
     public interface ITeamRepository
     {
-        Task<IEnumerable<Employee>> Get();
-        Task<Employee> Get(int id);
-        Task<Employee> Create(Employee employee);
-        Task Update(Employee employee);
+        Task<IEnumerable<User>> Get();
+        Task<User> Get(int id);
+        Task<User> Create(User user);
+        Task Update(User user);
         Task Delete(int id);
+
+
     }
 }

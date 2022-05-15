@@ -11,43 +11,43 @@ namespace TeamManagement.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EmployeeController : ControllerBase
+    public class UsersController : ControllerBase
     {
         private readonly ITeamRepository _teamRepository;
 
-        public EmployeeController(ITeamRepository teamRepository)
+        public UsersController(ITeamRepository teamRepository)
         {
             _teamRepository = teamRepository;
         }
 
         [HttpGet]
-        public async Task<IEnumerable<Employee>> GetEmployees()
+        public async Task<IEnumerable<User>> GetUsers()
         {
             return await _teamRepository.Get();
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Employee>> GetEmployees(int id)
+        public async Task<ActionResult<User>> GetUsers(int id)
         {
             return await _teamRepository.Get(id);
         }
 
         [HttpPost]
-        public async Task<ActionResult<Employee>> PostEmployees([FromBody] Employee employee)
+        public async Task<ActionResult<User>> Postuser([FromBody] User user)
         {
-            var newEmployee = await _teamRepository.Create(employee);
-            return CreatedAtAction(nameof(GetEmployees), new { id = newEmployee.EmployeeId }, newEmployee);
+            var newUser = await _teamRepository.Create(user);
+            return CreatedAtAction(nameof(GetUsers), new { id = newUser.UserId }, newUser);
         }
 
         [HttpPut]
-        public async Task<ActionResult> PutBooks(int id, [FromBody] Employee employee)
+        public async Task<ActionResult> PutBooks(int id, [FromBody] User user)
         {
-            if (id != employee.EmployeeId)
+            if (id != user.UserId)
             {
                 return BadRequest();
             }
 
-            await _teamRepository.Update(employee);
+            await _teamRepository.Update(user);
 
             return NoContent();
         }
@@ -55,12 +55,13 @@ namespace TeamManagement.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
-            var employeeToDelete = await _teamRepository.Get(id);
-            if (employeeToDelete == null)
+            var userToDelete = await _teamRepository.Get(id);
+            if (userToDelete == null)
                 return NotFound();
 
-            await _teamRepository.Delete(employeeToDelete.EmployeeId);
+            await _teamRepository.Delete(userToDelete.UserId);
             return NoContent();
         }
+
     }
 }

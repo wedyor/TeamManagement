@@ -15,34 +15,34 @@ namespace TeamManagement.Repositories
         {
             this._context = context;
         }
-        public async Task<Employee> Create(Employee employee)
+        public async Task<User> Create(User user)
         {
-            _context.Employees.Add(employee);
+            _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
-            return employee;
+            return user;
         }
 
         public async Task Delete(int id)
         {
-            var employeeToDelete = await _context.Employees.FindAsync(id);
-            _context.Employees.Remove(employeeToDelete);
+            var userToDelete = await _context.Users.FindAsync(id);
+            _context.Users.Remove(userToDelete);
             await _context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<Employee>> Get()
+        public async Task<IEnumerable<User>> Get()
         {
-            return await _context.Employees.ToListAsync();
+            return await _context.Users.ToListAsync();
         }
 
-        public async Task<Employee> Get(int id)
+        public async Task<User> Get(int id)
         {
-            return await _context.Employees.FindAsync(id);
+            return await _context.Users.FindAsync(id);
         }
 
-        public async Task Update(Employee employee)
+        public async Task Update(User user)
         {
-            _context.Entry(employee).State = EntityState.Modified;
+            _context.Entry(user).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }
     }

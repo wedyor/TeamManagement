@@ -37,6 +37,5 @@ namespace TeamManagement.Models
 
         [ForeignKey("UserId")]
         public virtual User user { get; set; }
-
     }
 }
