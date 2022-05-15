@@ -3,8 +3,8 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false"  >
-    <mat-toolbar  *ngIf="this.isAuth == 'true' && this.b=='Admin'">Menu</mat-toolbar>
-    <mat-nav-list  *ngIf="this.isAuth == 'true' && this.b=='Admin'">
+    <mat-toolbar >Menu</mat-toolbar>
+    <mat-nav-list >
       <a *ngFor="let item of menuItems" mat-list-item [routerLink]="'/'+item"> {{item | titlecase}} </a>
       <a mat-list-item *ngIf="this.isAuth == 'true'" class="logout" (click)="logout()">Logout</a>
       <a mat-list-item *ngIf="this.isAuth == 'false'" class="login" routerLink="/">Login</a>
