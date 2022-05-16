@@ -13,9 +13,9 @@
       "id": "2",
       "firstname": "Med",
       "lastname": "Ali",
-      "email": "medaliemplyee@gmail.com",
+      "email": "admin@gmail.com",
       "password": "pass123",
-      "role": "Employee"
+      "role": "Admin"
     }
   ],
   "requests": [
