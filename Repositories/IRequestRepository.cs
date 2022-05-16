@@ -10,8 +10,10 @@ namespace TeamManagement.Repositories
     {
         Task<IEnumerable<Request>> Get();
         Task<Request> Get(int id);
+        Task<Request> GetByEmail(string email);
         Task<Request> Create(Request request);
         Task Update(Request request);
         Task Delete(int id);
+
     }
 }

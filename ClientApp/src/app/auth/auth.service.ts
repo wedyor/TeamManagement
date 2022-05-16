@@ -34,7 +34,7 @@ export class AuthService {
       this.userEmail = email;
       const authData: AuthData = {email: email, password : password};
       console.log(authData);
-   this.user = await this.http.get("http://localhost:3000/users?email="+email).toPromise();
+   this.user = await this.http.get("http://localhost:56350/api/users/login/"+email).toPromise();
    console.log(this.user[0]);
    if(this.user && this.user[0].password == password){
    localStorage.setItem("userId", this.user[0].id);

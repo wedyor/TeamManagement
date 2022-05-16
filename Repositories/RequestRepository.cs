@@ -40,6 +40,11 @@ namespace TeamManagement.Repositories
             return await _context.Requests.FindAsync(id);
         }
 
+        public async Task<Request> GetByEmail(string email)
+        {
+            return await _context.Requests.FindAsync(email);
+        }
+
         public async Task Update(Request request)
         {
             _context.Entry(request).State = EntityState.Modified;

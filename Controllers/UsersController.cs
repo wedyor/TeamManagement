@@ -31,6 +31,11 @@ namespace TeamManagement.Controllers
         {
             return await _teamRepository.Get(id);
         }
+        [HttpGet("login/{email}")]
+        public async Task<ActionResult<User>> GetUsersbyemail(string email)
+        {
+            return await _teamRepository.GetByAddress(email);
+        }
 
         [HttpPost]
         public async Task<ActionResult<User>> Postuser([FromBody] User user)

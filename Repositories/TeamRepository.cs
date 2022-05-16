@@ -40,6 +40,11 @@ namespace TeamManagement.Repositories
             return await _context.Users.FindAsync(id);
         }
 
+        public async Task<User> GetByAddress(string email)
+        {
+            return await _context.Users.FirstOrDefaultAsync(e => e.Email == email);
+        }
+
         public async Task Update(User user)
         {
             _context.Entry(user).State = EntityState.Modified;
