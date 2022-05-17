@@ -30,6 +30,7 @@ namespace TeamManagement
         {
             services.AddScoped<ITeamRepository, TeamRepository>();
             services.AddScoped<IRequestRepository, RequestRepository>();
+            services.AddCors();
             services.AddControllers();
             services.AddDbContext<TeamContext>(options =>
            options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
@@ -45,6 +46,10 @@ namespace TeamManagement
             }
 
             app.UseRouting();
+            app.UseCors(
+                options => options.WithOrigins("*").AllowAnyMethod()
+            );
+
             app.UseSwagger();
             app.UseSwaggerUI();
             app.UseAuthorization();
