@@ -42,7 +42,7 @@ namespace TeamManagement.Repositories
 
         public async Task<User> GetByAddress(string email)
         {
-            return await _context.Users.FirstOrDefaultAsync(e => e.Email == email);
+            return await _context.Users.FirstOrDefaultAsync(e => e.email == email);
         }
 
         public async Task Update(User user)
