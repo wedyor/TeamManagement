@@ -51,55 +51,55 @@ namespace TeamManagement.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
-                    b.Property<int?>("UserId")
+                    b.Property<int?>("id")
                         .HasColumnType("int");
 
                     b.HasKey("RequestId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("id");
 
                     b.ToTable("Requests");
                 });
 
             modelBuilder.Entity("TeamManagement.Models.User", b =>
                 {
-                    b.Property<int>("UserId")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnName("UserId")
+                        .HasColumnName("id")
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Email")
+                    b.Property<string>("email")
                         .IsRequired()
-                        .HasColumnName("Email")
+                        .HasColumnName("email")
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
-                    b.Property<string>("FirstName")
+                    b.Property<string>("firstname")
                         .IsRequired()
-                        .HasColumnName("FirstName")
+                        .HasColumnName("firstname")
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
-                    b.Property<string>("LastName")
+                    b.Property<string>("lastname")
                         .IsRequired()
-                        .HasColumnName("LastName")
+                        .HasColumnName("lastname")
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
-                    b.Property<string>("Password")
+                    b.Property<string>("password")
                         .IsRequired()
-                        .HasColumnName("Password")
+                        .HasColumnName("password")
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
-                    b.Property<string>("Role")
+                    b.Property<string>("role")
                         .IsRequired()
-                        .HasColumnName("Role")
+                        .HasColumnName("role")
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
-                    b.HasKey("UserId");
+                    b.HasKey("id");
 
                     b.ToTable("Users");
                 });
@@ -108,7 +108,7 @@ namespace TeamManagement.Migrations
                 {
                     b.HasOne("TeamManagement.Models.User", "user")
                         .WithMany()
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("id");
                 });
 #pragma warning restore 612, 618
         }
