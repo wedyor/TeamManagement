@@ -9,37 +9,37 @@ namespace TeamManagement.Models
 {
     public class User
     {
-        [Column("UserId")]
+        [Column("id")]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Required]
-        public int UserId { get; set; }
+        public int id { get; set; }
 
-        [Column("Role")]
+        [Column("role")]
         [Required]
         [StringLength(50)]
-        public string Role { get; set; }
+        public string role { get; set; }
 
-        [Column("FirstName")]
+        [Column("firstname")]
         [Required]
         [StringLength(50)]
-        public string FirstName { get; set; }
+        public string firstname { get; set; }
 
-        [Column("LastName")]
+        [Column("lastname")]
         [Required]
         [StringLength(50)]
-        public string LastName { get; set; }
+        public string lastname { get; set; }
 
 
-        [Column("Email")]
+        [Column("email")]
         [Required]
         [StringLength(50)]
-        public string Email { get; set; }   
+        public string email { get; set; }   
 
 
-        [Column("Password")]
+        [Column("password")]
         [Required]
         [StringLength(50)]
-        public string Password { get; set; }
+        public string password { get; set; }
     }
 }

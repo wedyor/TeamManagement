@@ -35,7 +35,7 @@ namespace TeamManagement.Models
         [StringLength(50)]
         public string Status { get; set; }
 
-        [ForeignKey("UserId")]
+        [ForeignKey("id")]
         public virtual User user { get; set; }
     }
 }
