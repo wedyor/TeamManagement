@@ -2,14 +2,36 @@
   "users": [
     {
       "id": "1111",
-      "role": "Employee",
+      "role": "Admin",
       "firstname": "omar",
       "lastname": "ghghgh",
       "email": "medali@gmail.com",
       "password": "pass123"
-
+    },
+    {
+      "id": "1111",
+      "role": "Admin",
+      "firstname": "omar",
+      "lastname": "ghghgh",
+      "email": "medali@gmail.com",
+      "password": "pass123"
+    },
+    {
+      "id": "1111",
+      "role": "Employee",
+      "firstname": "omar",
+      "lastname": "ghghgh",
+      "email": "med@gmail.com",
+      "password": "pass123"
+    },
+    {
+      "id": "4",
+      "firstname": "vvvvc",
+      "lastname": "vbcvbcvbc",
+      "email": "iheb@gmail.com",
+      "password": "123456",
+      "role": "Responsable"
     }
-
   ],
   "requests": [
     {

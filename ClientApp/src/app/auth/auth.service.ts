@@ -36,18 +36,18 @@ export class AuthService {
       console.log(authData);
       //http://localhost:3000/users?email=
       //http://localhost:56350/api/users/login/
-   this.user = await this.http.get("http://localhost:56350/api/users/login/"+email).toPromise();
-   console.log(this.user);
-   if(this.user && this.user.password == password){
-   localStorage.setItem("userId", this.user.id);
-   localStorage.setItem("role", this.user.role);
+   this.user = await this.http.get("http://localhost:3000/users?email="+email).toPromise();
+   console.log(this.user[0]);
+   if(this.user && this.user[0].password == password){
+   localStorage.setItem("userId", this.user[0].id);
+   localStorage.setItem("role", this.user[0].role);
    console.log(this.user.role);
-   localStorage.setItem("email", this.user.email);
-   localStorage.setItem("name", this.user.firstname);
+   localStorage.setItem("email", this.user[0].email);
+   localStorage.setItem("name", this.user[0].firstname);
    localStorage.setItem("isAuth", 'true');
    this.isAuthenticated = true;
 
-   if(this.user.role == 'Admin'){
+   if(this.user[0].role == 'Admin'){
      console.log("admin")
     this.router.navigate(['/admin'])
    }else{  window.location.reload();
