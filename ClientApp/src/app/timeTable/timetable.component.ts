@@ -8,12 +8,15 @@ import { ResponsableService } from '../services/responsable.service';
 })
 export class TimeTableComponent implements OnInit {
   c: any;
+  role : any;
   timeTable: any;
   timeForm: any;
   EmployeId: any;
   constructor(private ResponsableService: ResponsableService) {}
 
   async ngOnInit() {
+    this.role = localStorage.getItem("role");
+    console.log(this.role);
     this.timeForm = new FormGroup({
       time: new FormControl(null, { validators: [] }),
       days: new FormControl(null, { validators: [] }),
@@ -22,7 +25,19 @@ export class TimeTableComponent implements OnInit {
       vehicule: new FormControl(null, { validators: [] }),
       partner: new FormControl(null, { validators: [] }),
     });
-
+    if(this.role == "Employee"){
+       let a = localStorage.getItem('userId');
+       this.timeTable = await this.ResponsableService.gettimeTable(a);
+    console.log(this.timeTable[0].time);
+    this.timeForm.setValue({
+      time: this.timeTable[0].time,
+      days: this.timeTable[0].days,
+      departure: this.timeTable[0].departure,
+      destination: this.timeTable[0].destination,
+      vehicule: this.timeTable[0].vehicule,
+      partner: this.timeTable[0].partner,
+    });
+    }
     this.c = await this.ResponsableService.getEmploye();
     console.log(this.c);
   }

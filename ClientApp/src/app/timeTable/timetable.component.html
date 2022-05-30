@@ -1,10 +1,12 @@
 <mat-card>
   <mat-card-title>Time table</mat-card-title><br>
+ <div *ngIf="this.role != 'Employee'">
   <mat-label>Select Employee : </mat-label>
   <select name="" id="" (change)="viewUser($event.target)">
     <option value="">        </option>
     <option  *ngFor="let user of this.c" value={{user.id}}>{{user.firstname}}</option>
   </select><br> <br>
+</div>
   <form [formGroup]="timeForm" id="timeForm" (submit)="SaveTable(timeForm)">
 
     <mat-form-field appearance="fill">
@@ -36,7 +38,7 @@
   <mat-label>working partner :</mat-label>
   <input matInput  formControlName="partner" type="text"><br><br>
 </mat-form-field>
-
-<button mat-button type="submit">Save </button>
+<div *ngIf="this.role != 'Employee'">
+<button mat-button type="submit">Save </button></div>
   </form>
 </mat-card>

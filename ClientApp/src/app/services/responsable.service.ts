@@ -42,8 +42,6 @@ export class ResponsableService {
         partner : partner
      }
      console.log(timeTable);
-     const body = JSON.stringify(timeTable);
-     const headers = { 'content-type': 'application/json' }
      let a = await this.http.put('http://localhost:3000/timeTable/'+id, timeTable).toPromise();
   }
 }
