@@ -43,7 +43,12 @@ export class AddComponent implements OnInit {
     // this.ref.detectChanges();
 
   }
-  AddNewUser(FormData: any) {
+  async AddNewUser(FormData: any) {
+    console.log(FormData.value.id);
+    if(FormData.value.role == "Employee"){
+      let a = await this.Adminservice.addTimeTable(FormData.value.id);
+      console.log('ts MMREGEL');
+   }
     this.Adminservice.AddNewUser(FormData.value).subscribe(
       (Response: any) => {
         this.User = Response;

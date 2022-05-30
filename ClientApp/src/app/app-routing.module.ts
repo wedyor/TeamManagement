@@ -7,6 +7,7 @@ import { DashComponent } from './dash/dash.component';
 import { NewReqComponent } from './new-req/new-req.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RequestsComponent } from './requests/requests.component';
+import { TimeTableComponent } from './timeTable/timetable.component';
 
 const routes: Routes = [
   { path: '' , component: LoginComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'admin', component: AdminComponent , canActivate : [AuthGuard] },
   { path: 'requests', component: RequestsComponent, canActivate : [AuthGuard]  },
   { path: 'newReq', component: NewReqComponent, canActivate : [AuthGuard]  },
+  { path: 'TimeTable', component: TimeTableComponent, canActivate : [AuthGuard]  },
   { path: '**', redirectTo: '' }
 ];
 

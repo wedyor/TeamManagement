@@ -12,7 +12,7 @@ import { AuthService } from '../auth/auth.service';
 export class NavComponent implements OnInit{
   isAuth : any;
   b: any;
-  menuItems = ['dashboard', 'profile', 'requests'];
+  menuItems = ['dashboard', 'profile', 'requests','TimeTable'];
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),

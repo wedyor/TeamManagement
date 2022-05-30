@@ -23,18 +23,37 @@ export class AdminService {
 
 
 
-  public AddNewUser(Form: Users): Observable<any> {
+  public  AddNewUser(Form: Users): Observable<any> {
 
     const headers = { 'content-type': 'application/json' }
     const body = JSON.stringify(Form);
+    console.log(body);
+    console.log(Form.role);
+
     return this.http.post(this.URL, body, { 'headers': headers });
   }
 
 
+ async addTimeTable(id: any){
+  const headers = { 'content-type': 'application/json' };
+  console.log(id);
+  let timeTable = {   // adding standard timing for new user
+    id : id,   //must be the same id as the employee id
+    time : "8 AM - 17 PM",
+    days : "Monday - Friday",
+    departure : "Tunis",
+    destination : "Monastir",
+    vehicule :  "Vehicule 2",
+    partner : "worker 1"
+ };
+ console.log(timeTable);
+ let a = JSON.stringify(timeTable);
+let b = await this.http.post('http://localhost:3000/timeTable',a,{ 'headers': headers }).toPromise();
+ return b;
+}
 
 
 
-  
   public DeleteUserById(idD: number): Observable<any> {
     this.id = idD;
     return this.http.delete('//localhost:3000/users/'+this.id)
@@ -42,7 +61,7 @@ export class AdminService {
 
 
 
-  
+
   public EditUserById(id: number, UpdatUserForm: Users): Observable<Users> {
     this.id = id;
     const body = JSON.stringify(UpdatUserForm);

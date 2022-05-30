@@ -39,6 +39,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { AddComponent } from './Dialog/add/add.component';
 import { DeleteComponent } from './Dialog/delete/delete.component';
 import { EditComponent } from './Dialog/edit/edit.component';
+import { TimeTableComponent } from './timeTable/timetable.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { EditComponent } from './Dialog/edit/edit.component';
     ProfileComponent,
     AddComponent,
     DeleteComponent,
-    EditComponent
+    EditComponent,
+    TimeTableComponent
 
   ],
   imports: [

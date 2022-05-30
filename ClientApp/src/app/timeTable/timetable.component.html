@@ -1,0 +1,42 @@
+<mat-card>
+  <mat-card-title>Time table</mat-card-title><br>
+  <mat-label>Select Employee : </mat-label>
+  <select name="" id="" (change)="viewUser($event.target)">
+    <option value="">        </option>
+    <option  *ngFor="let user of this.c" value={{user.id}}>{{user.firstname}}</option>
+  </select><br> <br>
+  <form [formGroup]="timeForm" id="timeForm" (submit)="SaveTable(timeForm)">
+
+    <mat-form-field appearance="fill">
+  <mat-label>Working time :</mat-label>
+  <input  matInput  formControlName="time" type="text"><br> <br>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Working days :</mat-label>
+  <input matInput  formControlName="days" type="text"><br><br>
+</mat-form-field>
+
+  <mat-form-field appearance="fill">
+  <mat-label>Depature :   </mat-label>
+  <input matInput  formControlName="departure" type="text"><br><br>
+</mat-form-field>
+
+  <mat-form-field appearance="fill">
+  <mat-label>Destination :  </mat-label>
+  <input matInput  formControlName="destination" type="text"><br><br>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Vehicule details :</mat-label>
+  <input matInput  formControlName="vehicule" type="text"><br><br>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>working partner :</mat-label>
+  <input matInput  formControlName="partner" type="text"><br><br>
+</mat-form-field>
+
+<button mat-button type="submit">Save </button>
+  </form>
+</mat-card>

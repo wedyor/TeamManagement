@@ -1,0 +1,17 @@
+mat-card{
+  margin: 40px;
+  width: 340px;
+  height: 600px;
+  background-color: rgb(146, 146, 146);
+}
+
+button{
+  margin-left: 40px;
+  background-color:rgb(82, 81, 81);
+}
+
+select{
+  width: 100px;
+  height: 20px;
+  margin-left: 50px;
+}
