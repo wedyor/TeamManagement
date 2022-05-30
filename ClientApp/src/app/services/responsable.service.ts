@@ -41,7 +41,8 @@ export class ResponsableService {
         vehicule :  vehicule,
         partner : partner
      }
-     console.log(timeTable);
+     //console.log(timeTable);
      let a = await this.http.put('http://localhost:3000/timeTable/'+id, timeTable).toPromise();
+     window.location.reload();
   }
 }
