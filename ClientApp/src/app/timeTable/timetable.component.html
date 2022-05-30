@@ -6,7 +6,7 @@
     <option value="">        </option>
     <option  *ngFor="let user of this.c" value={{user.id}}>{{user.firstname}}</option>
   </select><br> <br>
-</div>
+
   <form [formGroup]="timeForm" id="timeForm" (submit)="SaveTable(timeForm)">
 
     <mat-form-field appearance="fill">
@@ -38,7 +38,30 @@
   <mat-label>working partner :</mat-label>
   <input matInput  formControlName="partner" type="text"><br><br>
 </mat-form-field>
-<div *ngIf="this.role != 'Employee'">
-<button mat-button type="submit">Save </button></div>
+
+<button mat-button type="submit">Save </button>
   </form>
+</div>
+  <div *ngIf="this.role == 'Employee'">
+  <mat-list>
+    <mat-label>Working Time :</mat-label>
+    <mat-list-item>{{this.timeTable[0].time}}</mat-list-item>
+    <mat-divider></mat-divider><br>
+    <mat-label>Working Days :</mat-label>
+    <mat-list-item>{{this.timeTable[0].days}}</mat-list-item>
+    <mat-divider></mat-divider><br>
+    <mat-label>Departure :</mat-label>
+    <mat-list-item>{{this.timeTable[0].departure}}</mat-list-item>
+    <mat-divider></mat-divider><br>
+    <mat-label>Destination :</mat-label>
+    <mat-list-item>{{this.timeTable[0].destination}}</mat-list-item>
+    <mat-divider></mat-divider><br>
+    <mat-label>Vehicule :</mat-label>
+    <mat-list-item>{{this.timeTable[0].vehicule}}</mat-list-item>
+    <mat-divider></mat-divider><br>
+    <mat-label>Partner :</mat-label>
+    <mat-list-item>{{this.timeTable[0].partner}}</mat-list-item>
+    <mat-divider></mat-divider><br>
+  </mat-list>
+</div>
 </mat-card>
