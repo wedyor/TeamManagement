@@ -1,28 +1,28 @@
 {
   "users": [
     {
-      "id": "2",
-      "role": "Admin",
       "firstname": "omar",
-      "lastname": "ghghgh",
+      "lastname": "Kamel",
       "email": "medali@gmail.com",
-      "password": "pass123"
+      "password": "pass123",
+      "role": "Admin",
+      "id": "2"
     },
     {
-      "id": "15",
-      "role": "Admin",
       "firstname": "omar",
-      "lastname": "ghghgh",
+      "lastname": "Ali",
       "email": "medali@gmail.com",
-      "password": "pass123"
+      "password": "pass123",
+      "role": "Admin",
+      "id": "15"
     },
     {
-      "id": "20",
-      "role": "Employee",
       "firstname": "hamdi",
-      "lastname": "ghghgh",
+      "lastname": "Sirine",
       "email": "medadddli@gmail.com",
-      "password": "pass123"
+      "password": "pass123",
+      "role": "Employee",
+      "id": "20"
     },
     {
       "id": "21",
@@ -36,7 +36,7 @@
       "id": "123",
       "role": "Employee",
       "firstname": "omar",
-      "lastname": "ghghgh",
+      "lastname": "jlassi",
       "email": "med@gmail.com",
       "password": "pass123"
     },
